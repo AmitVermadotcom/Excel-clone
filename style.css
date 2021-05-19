@@ -121,17 +121,17 @@ body {
     align-items: center;
     padding-right: 0.7rem;
     padding-left: 0.7rem;
-    overflow:hidden;
+    overflow: hidden;
     background-color: #fff;
 }
 
 .data-container {
     display: flex;
-    height: 76vh;
+    height: 75vh;
     width: 100vw;
     flex-wrap: wrap;
     flex-direction: row;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 #select-all{
@@ -142,32 +142,74 @@ body {
 
 #columns {
     height: 25px;
-    width: calc(100vw - 42px);
+    width: calc(100vw - 25px);
     border: 1px solid lightgrey;
     display: flex;
+    overflow: hidden;
 }
 
 #rows {
-    height: calc(76vh - 42px);
+    height: calc(75vh - 25px);
     width: 25px;
     border: 1px solid lightgrey;
+    overflow: hidden;
 }
 
 #cells {
-    height: calc(76vh - 42px);
-    width: calc(100vw - 42px);
+    height: calc(75vh - 25px);
+    width: calc(100vw - 25px);
     border: 1px solid lightgrey;
+    overflow: scroll;
+    position: relative;
 }
 .sheet-bar {
-    height: 3vh;
+    height: 4vh;
     width: 100vw;
 }
 
 .column-name {
     width: 100px;
+    min-width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 600;
     border-right: 0.5px solid lightgrey;
+}
+
+.row-name {
+    height: 25px;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-bottom: 0.5px solid lightgrey;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.input-cell {
+    width: 100px;
+    min-width: 100px;
+    height: 25px;
+    min-height: 25px;
+    border-bottom: 0.5px solid lightgray;
+    border-right: 0.5px solid lightgray;
+    padding-left: 3px;
+    padding-right: 3px;
+    overflow: hidden;
+    font-size: 14px;
+    font-family: Noto Sans;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.input-cell.selected {
+    border: 3px solid #217346;
+    outline: #217346;
 }
