@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+.title-bar {
+    height: 5vh;
+    width: 100vw;
+    background-color: #217346;
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar {
+    height: 5vh;
+    width: 100vw;
+    background-color: #217346;
+    color: #fff;
+    display: flex;
+}
+
+.menu-bar-item {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.menu-bar-item.selected {
+    color: #217346;
+    background-color: #fff;
+}
+
+.menu-bar-item:hover {
+    background-color: #1a613a;
+    cursor: pointer;
+}
+.menu-bar-item.selected:hover {
+    background-color: #fff;
+    cursor: default;
+}
+
+.menu-icon-bar{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    height: 100%;
+}
+
+.menu-icon:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.menu-selector {
+    height: 4.5vh;
+    font-size: 1.2rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+#font-family {
+    width: 10vw;
+    min-width: 130px;
+    font-family: Noto Sans;
+}
+#font-size {
+    width: 3.5vw;
+    min-width: 55px;
+}
+
+.formula-bar {
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background-color: lightgray;
+}
+
+#selected-cell {
+    width: 120px;
+    height: 70%;
+}
+
+#function-sign {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+#function-input {
+    width: calc(100vw - 160px);
+    height: 70%;
+}
+
+.formula-editor {
+    display: flex;
+    align-items: center;
+    padding-right: 0.7rem;
+    padding-left: 0.7rem;
+    overflow:hidden;
+    background-color: #fff;
+}
+
+.data-container {
+    display: flex;
+    height: 76vh;
+    width: 100vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+    overflow: scroll;
+}
+
+#select-all{
+    height: 25px;
+    width: 25px;
+    border: 1px solid lightgrey;
+}
+
+#columns {
+    height: 25px;
+    width: calc(100vw - 42px);
+    border: 1px solid lightgrey;
+    display: flex;
+}
+
+#rows {
+    height: calc(76vh - 42px);
+    width: 25px;
+    border: 1px solid lightgrey;
+}
+
+#cells {
+    height: calc(76vh - 42px);
+    width: calc(100vw - 42px);
+    border: 1px solid lightgrey;
+}
+.sheet-bar {
+    height: 3vh;
+    width: 100vw;
+}
+
+.column-name {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-right: 0.5px solid lightgrey;
+}
